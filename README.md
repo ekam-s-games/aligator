@@ -1,7 +1,5 @@
 # aligator
 
-<!-- El problema -->
-
 *aligator* intenta ser una pequeña automatización de propósito específico, en apoyo a la gestión de hallazgos, ayudando
 en la homologación (o replica) de un requerimiento creado en *QA-Team* hacia las herramientas *Mantis-BT* y *TestLink*.
 
@@ -39,10 +37,21 @@ del requerimiento.
 
 ## Prerrequisitos
 
+### Paquetes
+
 El proceso necesita las herramientas `Selenium` y `PyMySQL`. Ambos listados en el archivo `requirements.txt`.
 
 Para instalarlos, use la siguiente instrucción:
 
 ``` shell
 pip install -r requirements.txt
+```
+
+### chromedriver
+
+Por defecto el proyecto usa el navegador *Chrome*; por tal motivo buscará la solución `chromedriver.txt` en una carpeta
+local llamada `tools`.
+
+``` python
+driver = webdriver.Chrome(executable_path=r'tools/chromedriver.exe')
 ```
